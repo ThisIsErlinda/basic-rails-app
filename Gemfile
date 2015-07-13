@@ -52,6 +52,7 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'figaro', '1.0'
 gem 'devise'
 gem 'faker'
 gem 'pry-rails'
