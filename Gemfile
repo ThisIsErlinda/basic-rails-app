@@ -58,5 +58,4 @@ gem 'devise'
 gem 'faker'
 gem 'pry-rails'
 gem 'pundit'
-gem 'rails_12factor'
 
