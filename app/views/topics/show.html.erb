@@ -11,16 +11,17 @@
        <div class="media">
          <div class="media-body">
            <h4 class="media-heading">
-             <%= link_to (post.title), [@topic, post] %>
-           </h4>
-
-              <small>
-     submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %><br>
-     <%= post.comments.count %> Comments
-   </small>
-   
-         </div>
-       </div>
+          <%= link_to (markdown_to_html post.title), [@topic, post] %>
+        </h4>
+          <%= image_tag(post.image.url) if post.image?%><br>
+        <small>
+          <%= image_tag(post.user.avatar.tiny.url) if post.user.avatar? %>
+          submitted <%= time_ago_in_words(post.created_at) %> ago by
+          <%= post.user.name %><br>
+          <%= post.comments.count %> Comments
+        </small>
+      </div>
+    </div>
      <% end %>
    </div>
    <div class="col-md-4">
