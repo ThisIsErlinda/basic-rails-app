@@ -37,12 +37,13 @@ require 'faker'
 
  
 # Create Posts
-50.times do
- Post.create!(
-    user:   users.sample,
-    title:  Faker::Lorem.sentence,
-    body:   Faker::Lorem.paragraph
- )
+150.times do
+    Post.create!(
+      user:   users.sample,
+      topic:  topics.sample,
+      title:  Faker::Lorem.sentence,
+      body:   Faker::Lorem.paragraph
+      )
 end
 posts = Post.all
 
